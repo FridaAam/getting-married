@@ -34,7 +34,8 @@ function setLang(lang){
 
 function goTo(page){
   pages.forEach(p => {
-    document.getElementById(p).classList.toggle('active', p === page);
+    const el = document.getElementById(p);
+    if(el) el.classList.toggle('active', p === page);
   });
   document.querySelectorAll('.navlinks a[data-page]').forEach(a=>{
     a.classList.toggle('active', a.dataset.page === page);
