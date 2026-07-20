@@ -171,4 +171,4 @@ function escapeHtml(str){
 }
 
 setLang('no');
-goTo('program');
+goTo('hero');

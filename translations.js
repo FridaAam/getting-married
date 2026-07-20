@@ -49,9 +49,9 @@ const translations = {
       }
     },
     rsvp:{
-      kicker:"Vi håper du kommer", sub:"Gi oss beskjed om du blir med — på grill & chill, bryllupet, eller begge deler.",
+      kicker:"Vi håper du kommer", sub:"Gi oss beskjed om du blir med — på grilling på fredag, bryllupet, eller begge deler.",
       name:{label:"Navn", ph:"Fornavn Etternavn"},
-      friday:{label:"Fredag — Grill & chill (18:00–22:00)"},
+      friday:{label:"Fredag — Grilling (18:00–22:00)"},
       saturday:{label:"Lørdag — Bryllupet", sub:"Vielse & fest"},
       attending:"Kommer", cant:"Kan ikke",
       notes:{label:"Allergier, matpreferanser eller annet vi bør vite", ph:"F.eks. glutenfri, vegetar, annet..."},
@@ -113,9 +113,9 @@ const translations = {
       }
     },
     rsvp:{
-      kicker:"We hope you'll come", sub:"Let us know if you'll join us — for grill & chill, the wedding, or both.",
+      kicker:"We hope you'll come", sub:"Let us know if you'll join us — for casual barbeque, the wedding, or both.",
       name:{label:"Name", ph:"First Last"},
-      friday:{label:"Friday — Grill & Chill (18:00–22:00)"},
+      friday:{label:"Friday — Casual barbeque (18:00–22:00)"},
       saturday:{label:"Saturday — The Wedding", sub:"Ceremony & Party"},
       attending:"Attending", cant:"Can't make it",
       notes:{label:"Allergies, dietary preferences, or anything else we should know", ph:"E.g. gluten-free, vegetarian, other..."},
