@@ -6,18 +6,18 @@
 <title>Frida &amp; Kristoffer · 29. august</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <!-- "The Seasons" is an Adobe Fonts (Typekit) font and needs your own kit embed code to load — see chat for details. Add it here, e.g.: -->
 <!-- <link rel="stylesheet" href="https://use.typekit.net/xxxxxxx.css"> -->
 <style>
   :root{
-    --bg: #FFFFFF;
-    --ink: #1F2E35;
-    --sea: #4C6B63;
-    --gold: #B08D57;
-    --sand: #E8E1D3;
-    --sage: #7C8B7F;
-    --line: rgba(31,46,53,0.14);
+    --bg: #F3FAFA;
+    --ink: #0C2733;
+    --sea: #1B7A8C;
+    --gold: #4FB8C8;
+    --sand: #C8E8ED;
+    --sage: #5A8E9B;
+    --line: rgba(12,39,51,0.14);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -25,19 +25,19 @@
     margin:0;
     background:var(--bg);
     color:var(--ink);
-    font-family:'EB Garamond', serif;
+    font-family:'Cormorant Garamond', serif;
     font-size:19px;
     line-height:1.65;
     -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3,.display{
-    font-family:'the-seasons', 'Fraunces', serif;
+    font-family:'Cormorant Garamond', serif;
     font-weight:500;
     letter-spacing:-0.01em;
     margin:0;
   }
   .label{
-    font-family:'Inter', sans-serif;
+    font-family:'Cormorant Garamond', serif;
     font-size:11px;
     font-weight:600;
     letter-spacing:0.16em;
@@ -52,13 +52,17 @@
     position:fixed; top:0; left:0; right:0; z-index:50;
     display:flex; align-items:center; justify-content:space-between;
     padding:18px 5vw;
-    background:rgba(247,244,236,0.88);
-    backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line);
-    gap:16px;
+    gap:24px;
+  }
+  nav::before{
+    content:''; position:absolute; inset:0; z-index:-1;
+    background:rgba(232,247,249,0.88);
+    backdrop-filter:blur(8px);
+    pointer-events:none;
   }
   .brandmark{
-    font-family:'Fraunces', serif;
+    font-family:'Cormorant Garamond', serif;
     font-style:italic;
     font-size:20px;
     color:var(--ink);
@@ -68,9 +72,14 @@
   .navlinks{
     display:flex; align-items:center; gap:clamp(12px,2.2vw,30px);
     list-style:none; margin:0; padding:0;
+    flex:1; justify-content:center; overflow:hidden;
+  }
+
+  .navlinks ul {
+    gap: 60px;
   }
   .navlinks li a{
-    font-family:'Inter', sans-serif;
+    font-family:'Cormorant Garamond', serif;
     font-size:12px;
     font-weight:500;
     letter-spacing:0.08em;
@@ -82,6 +91,7 @@
     transition:color .25s ease, border-color .25s ease;
     background:none; border-top:none; border-left:none; border-right:none;
     cursor:pointer;
+    gap: 24px;
   }
   .navlinks li a:hover{color:var(--ink);}
   .navlinks li a.active{color:var(--ink); border-bottom-color:var(--gold);}
@@ -97,15 +107,27 @@
   }
   .langswitch button.active{background:var(--ink); color:var(--bg);}
 
-  @media (max-width:760px){
+  @media (max-width:900px){
     .navlinks{
-      position:fixed; top:60px; left:0; right:0; bottom:0;
+      display:none;
+      position:fixed; top:74px; left:0; right:0;
       background:var(--bg); flex-direction:column; align-items:flex-start;
-      padding:30px 8vw; gap:22px;
-      transform:translateX(100%); transition:transform .35s ease;
+      padding:24px 8vw 28px; gap:20px;
+      border-bottom:1px solid var(--line);
+      box-shadow:0 8px 24px rgba(12,39,51,0.1);
+      z-index:49;
     }
-    .navlinks.open{transform:translateX(0);}
+    .navlinks.open{
+      display:flex;
+      animation:navIn .25s ease;
+    }
+    @keyframes navIn{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:translateY(0);}}
     .navlinks li a{font-size:16px;}
+    .nav-backdrop{
+      display:none; position:fixed; inset:0; top:74px; z-index:48;
+      background:rgba(12,39,51,0.25);
+    }
+    .nav-backdrop.open{display:block;}
     .navtoggle{
       display:block; background:none; border:1px solid var(--line);
       border-radius:2px; width:38px; height:38px; position:relative; cursor:pointer;
@@ -144,7 +166,7 @@
     display:flex; align-items:center; gap:clamp(10px,2vw,26px); flex-wrap:wrap; justify-content:center;
   }
   #hero h1 .amp{
-    font-style:italic; color:var(--gold); font-size:0.65em; font-weight:400;
+    font-style:bold; color:var(--gold); font-size:0.65em; font-weight:400;
   }
   #hero .date{
     margin-top:28px; font-family:'Inter',sans-serif; font-size:14px; letter-spacing:0.14em;
@@ -192,7 +214,7 @@
     font-family:'Inter',sans-serif; font-size:13px; font-weight:600; letter-spacing:.06em;
     color:var(--sea); display:block; margin-bottom:4px;
   }
-  .tl-title{font-family:'Fraunces',serif; font-size:22px; margin-bottom:4px;}
+  .tl-title{font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:4px;}
   .tl-desc{color:var(--ink); opacity:0.82; max-width:520px;}
 
   /* ---- Info page ---- */
@@ -221,7 +243,7 @@
     padding:20px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
   }
   .stay-meta .meta-item .label{margin-bottom:6px; display:block;}
-  .stay-meta .meta-item .value{font-family:'Fraunces',serif; font-style:italic; font-size:18px;}
+  .stay-meta .meta-item .value{font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px;}
   .price-label{margin-bottom:16px;}
   .price-table{width:100%; border-collapse:collapse; margin-bottom:24px;}
   .price-table td{
@@ -236,7 +258,7 @@
   }
   .unit-card:last-of-type{border-bottom:none;}
   .unit-head{display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; margin-bottom:8px;}
-  .unit-head .unit-id{font-family:'Fraunces',serif; font-style:italic; font-size:20px; color:var(--gold);}
+  .unit-head .unit-id{font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:var(--gold);}
   .unit-head .unit-cap{font-family:'Inter',sans-serif; font-size:12px; letter-spacing:.04em; color:var(--sea);}
   .unit-head .unit-price{margin-left:auto; font-family:'Inter',sans-serif; font-size:15px; font-weight:600; color:var(--ink);}
   .unit-card p{margin:0; font-size:16px; opacity:0.85;}
@@ -249,7 +271,7 @@
   }
   .field input[type=text], .field input[type=email], .field input[type=number], .field textarea{
     width:100%; border:none; border-bottom:1px solid var(--line); background:transparent;
-    font-family:'EB Garamond', serif; font-size:19px; color:var(--ink); padding:10px 2px;
+    font-family:'Cormorant Garamond', serif; font-size:19px; color:var(--ink); padding:10px 2px;
     outline:none; transition:border-color .2s ease;
   }
   .field textarea{resize:vertical; min-height:70px; font-style:italic;}
@@ -260,7 +282,7 @@
     cursor:pointer; text-align:center; transition:border-color .2s ease, background .2s ease;
   }
   .choice input{display:none;}
-  .choice .ctitle{font-family:'Fraunces',serif; font-style:italic; font-size:18px;}
+  .choice .ctitle{font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px;}
   .choice .csub{display:block; font-family:'Inter',sans-serif; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--sage); margin-top:4px;}
   .choice.selected{border-color:var(--gold); background:var(--sand);}
   .submitbtn{
@@ -303,7 +325,7 @@
 
 <nav>
   <span class="brandmark">F &amp; K</span>
-  <button class="navtoggle" onclick="document.querySelector('.navlinks').classList.toggle('open')"><span></span></button>
+  <button class="navtoggle" onclick="toggleNav()"><span></span></button>
   <ul class="navlinks">
     <li><a data-page="hero" onclick="goTo('hero')">F&amp;K</a></li>
     <li><a data-page="program" data-i18n="nav.program" onclick="goTo('program')"></a></li>
@@ -316,12 +338,13 @@
     <button id="btnEn" onclick="setLang('en')">EN</button>
   </div>
 </nav>
+<div class="nav-backdrop" onclick="closeNav()"></div>
 
 <main>
 
   <section id="hero" class="page">
     <div class="label eyebrow" data-i18n="hero.eyebrow"></div>
-    <h1>Frida <span class="amp">&amp;</span> Kristoffer</h1>
+    <h1>Frida & Kristoffer</h1>
     <div class="date" data-i18n="hero.date"></div>
     <div class="place" data-i18n="hero.place"></div>
 
@@ -375,17 +398,14 @@
           <div class="tl-item">
             <span class="tl-time">13:00</span>
             <div class="tl-title" data-i18n="program.sat.t1"></div>
-            <p class="tl-desc" data-i18n="program.sat.d1"></p>
           </div>
           <div class="tl-item">
             <span class="tl-time">14:00</span>
             <div class="tl-title" data-i18n="program.sat.t2"></div>
-            <p class="tl-desc" data-i18n="program.sat.d2"></p>
           </div>
           <div class="tl-item">
             <span class="tl-time">17:00</span>
             <div class="tl-title" data-i18n="program.sat.t3"></div>
-            <p class="tl-desc" data-i18n="program.sat.d3"></p>
           </div>
           <div class="tl-item">
             <span class="tl-time" data-i18n="program.sat.laterTime"></span>
@@ -410,7 +430,6 @@
           <h3 data-i18n="info.loc.h"></h3>
           <p data-i18n="info.loc.p1"></p>
           <p data-i18n="info.loc.p2"></p>
-          <span class="placeholder" data-i18n="info.loc.ph"></span>
         </div>
         <div class="info-card">
           <h3 data-i18n="info.dress.h"></h3>
@@ -420,7 +439,6 @@
         <div class="info-card">
           <h3 data-i18n="info.transport.h"></h3>
           <p data-i18n="info.transport.p1"></p>
-          <span class="placeholder" data-i18n="info.transport.ph"></span>
         </div>
         <div class="info-card">
           <h3 data-i18n="info.gifts.h"></h3>
@@ -608,26 +626,26 @@
 <script>
   const translations = {
     no: {
-      nav:{program:"Program", info:"Praktisk info", stay:"Overnatting", activities:"Opplevelser", cast:"Cast & Characters", rsvp:"RSVP"},
+      nav:{program:"Program", info:"Praktisk info", stay:"Overnatting", rsvp:"RSVP"},
       hero:{eyebrow:"Vi skal gifte oss", date:"29. august · Stilla, Indre Kviviga", place:"Stilla, Høvåg - Sørlandet", scroll:"Stilla venter"},
       program:{
         kicker:"Helgens gang", title:"Program",
         sub:"To dager ved sjøen — én rolig kveld for å bli kjent, én dag for å feire.",
-        fri:{day:"Fredag", desc:"Vi tenner grillen, åpner noe godt i glasset og bruker kvelden på å bli bedre kjent før den store dagen. Uformelt, avslappet, og rett ved vannet."},
+        fri:{day:"Fredag", desc:"Vi tenner grillen, og bruker kvelden på å bli bedre kjent før den store dagen. Uformelt og avslappet."},
         sat:{
           day:"Lørdag", sub:"Bryllupsdagen",
           t1:"Vielse", d1:"Selve seremonien — vi sier ja.",
-          t2:"Drinker", d2:"Et glass i hånden og tid til å gratulere, puste ut og nyte utsikten.",
-          t3:"Middag", d3:"Vi setter oss til bords sammen.",
-          laterTime:"Utover kvelden", t4:"Dans", d4:"Dansefoten løftes, og kvelden er vår."
+          t2:"Mottakelse", d2:"Mottakelse med lett mat og drikke på plenen",
+          t3:"Middag", d3:"Middag i teltet",
+          laterTime:"Utover kvelden", d4:"Kake, dans og fest",
         }
       },
       info:{
         kicker:"Godt å vite", title:"Praktisk informasjon", sub:"Alt du trenger å vite før du kommer til Stilla.",
-        loc:{h:"Sted", p1:"Stilla, Indre Kviviga, Høvåg.", p2:"Nøyaktig adresse og veibeskrivelse deles nærmere bryllupet.", ph:"Adresse legges til"},
-        dress:{h:"Antrekk", p1:"Smoking/dress; lang (uhvit) kjole; bunad/festdrakt.", p2:"Vi anbefaler plen-vennlige sko, siden vielsen og minglingen foregår på gress."},
+        loc:{h:"Sted", p1:"Stilla, Kvivigveien 40, 4770 Høvåg."},
+        dress:{h:"Antrekk", p1:"Smoking/dress; lang (uhvit) kjole.", p2:"Vi anbefaler plen-vennlige sko, da vielsen og minglingen foregår på gress."},
         stay:{h:"Overnatting", p1:"Forslag til overnatting i nærheten kommer her — både hoteller i Lillesand og muligheter for hytte/rom i området.", ph:"Forslag legges til"},
-        transport:{h:"Transport", p1:"Info om parkering på stedet og eventuell samkjøring/skyss fra Lillesand kommer så snart det er avklart.", ph:"Detaljer legges til"},
+        transport:{h:"Transport", p1:"For gjester som bor i Kristiansand vil det settes opp buss/taxi fra Thon Hotell Parken i Kristiansand til og fra Stilla. Vi anbefaler gjester som bor på Skottevik Feriesenter om å rusle bort til Stilla. Det tar ca. 15 minutter."},
         gifts:{h:"Gaver", p1:"Det viktigste er at dere kommer.", ph:"Info legges til"},
         food:{h:"Mat & allergier", p1:"Har du allergier eller matpreferanser? Legg det inn under RSVP, så tar vi hånd om det."}
       },
@@ -672,12 +690,12 @@
       footer:{line:"29. august · Stilla, Høvåg"}
     },
     en: {
-      nav:{program:"Schedule", info:"Good to Know", stay:"Accommodation", activities:"Things to Do", cast:"Cast & Characters", rsvp:"RSVP"},
+      nav:{program:"Schedule", info:"Good to Know", stay:"Accommodation", rsvp:"RSVP"},
       hero:{eyebrow:"We're getting married", date:"August 29 · Stilla, Indre Kviviga", place:"Stilla, Høvåg – Sørlandet, Norway", scroll:"Stilla awaits"},
       program:{
         kicker:"The weekend", title:"Schedule",
         sub:"Two days by the sea — one relaxed evening to get to know each other, one day to celebrate.",
-        fri:{day:"Friday", desc:"We'll light the grill, pour something nice, and spend the evening getting to know each other before the big day. Relaxed, informal, right by the water."},
+        fri:{day:"Friday", desc:"We'll light the grill, and spend the evening getting to know each other before the big day. Relaxed and informal."},
         sat:{
           day:"Saturday", sub:"Wedding Day",
           t1:"Ceremony", d1:"The ceremony itself — we say yes.",
@@ -688,10 +706,10 @@
       },
       info:{
         kicker:"Good to know", title:"Practical Information", sub:"Everything you need to know before you arrive at Stilla.",
-        loc:{h:"Location", p1:"Stilla, Indre Kviviga, Høvåg — the home of Fredrik (Kristoffer's brother) and Hayley.", p2:"Exact address and directions will be shared closer to the wedding.", ph:"Address coming soon"},
-        dress:{h:"Dress Code", p1:"Tuxedo/suit; long (non-white) dress; bunad/traditional costume.", p2:"We recommend grass-friendly shoes, since the ceremony and mingling take place on the lawn."},
+        loc:{h:"Location", p1:"Stilla, Kvivigveien 40, 4770 Høvåg"},
+        dress:{h:"Dress Code", p1:"Tuxedo/suit; long (non-white) dress.", p2:"We recommend lawn-friendly shoes, since the ceremony and mingling take place on the lawn."},
         stay:{h:"Accommodation", p1:"Suggestions for nearby accommodation will go here — hotels in Lillesand as well as cabins and rooms in the area.", ph:"Suggestions coming soon"},
-        transport:{h:"Transport", p1:"Details on parking at the venue and possible carpooling/shuttle from Lillesand will be added once confirmed.", ph:"Details coming soon"},
+        transport:{h:"Transport", p1:"For guests staying at Thon Hotel Parken in Kristiansand we will arrange taxi/bus to and from Stilla. For guests staying at Skottevik Feriesenter, we recommend walking over to Stilla. It takes about 15 minutes."},
         gifts:{h:"Gifts", p1:"The most important thing is that you're there.", ph:"Info coming soon"},
         food:{h:"Food & Allergies", p1:"Have any allergies or dietary preferences? Let us know under RSVP and we'll take care of it."}
       },
@@ -737,6 +755,15 @@
     }
   };
 
+  function toggleNav(){
+    const open = document.querySelector('.navlinks').classList.toggle('open');
+    document.querySelector('.nav-backdrop').classList.toggle('open', open);
+  }
+  function closeNav(){
+    document.querySelector('.navlinks').classList.remove('open');
+    document.querySelector('.nav-backdrop').classList.remove('open');
+  }
+
   let currentLang = 'no';
   const pages = ['hero','program','info','overnatting','opplevelser','cast','rsvp'];
 
@@ -769,7 +796,7 @@
     document.querySelectorAll('.navlinks a[data-page]').forEach(a=>{
       a.classList.toggle('active', a.dataset.page === page);
     });
-    document.querySelector('.navlinks').classList.remove('open');
+    closeNav();
     window.scrollTo(0,0);
     if(page === 'rsvp') loadAdminPreview();
   }
