@@ -6,7 +6,7 @@
 <title>Frida &amp; Kristoffer · 29. august</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <!-- "The Seasons" is an Adobe Fonts (Typekit) font and needs your own kit embed code to load — see chat for details. Add it here, e.g.: -->
 <!-- <link rel="stylesheet" href="https://use.typekit.net/xxxxxxx.css"> -->
 <link rel="stylesheet" href="styles.css">
@@ -34,9 +34,10 @@
 
   <section id="hero" class="page active">
     <div class="label eyebrow" data-i18n="hero.eyebrow"></div>
-    <h1>Frida & Kristoffer</h1>
+    <h1><span>Frida</span> <span class="amp">&amp;</span> <span>Kristoffer</span></h1>
     <div class="date" data-i18n="hero.date"></div>
     <div class="place" data-i18n="hero.place"></div>
+    <a class="hero-cta" onclick="goTo('rsvp')" data-i18n="hero.rsvpCta"></a>
 
     <div class="horizon-wrap">
       <svg viewBox="0 0 680 140" xmlns="http://www.w3.org/2000/svg">
@@ -55,6 +56,13 @@
         </path>
       </svg>
     </div>
+
+    <div class="hero-gallery">
+      <figure class="photo-frame frame-reveal pf-1"><img src="photos/gallery-1.jpg" alt="Frida og Kristoffer"></figure>
+      <figure class="photo-frame frame-reveal pf-2"><img src="photos/gallery-2.jpg" alt="Frida og Kristoffer"></figure>
+      <figure class="photo-frame frame-reveal pf-3"><img src="photos/F&amp;K7.jpg" alt="Utsikt"></figure>
+      <figure class="photo-frame frame-reveal pf-4"><img src="photos/gallery-4.jpg" alt="Frida og Kristoffer"></figure>
+    </div>
   </section>
 
   <section id="program" class="page">
@@ -65,7 +73,7 @@
         <p class="sub" data-i18n="program.sub"></p>
       </div>
 
-      <div class="day-block">
+      <div class="day-block reveal">
         <div class="daytitle">
           <h3 data-i18n="program.fri.day"></h3>
           <span class="dsub">Grill &amp; Chill</span>
@@ -79,7 +87,7 @@
         </div>
       </div>
 
-      <div class="day-block">
+      <div class="day-block reveal">
         <div class="daytitle">
           <h3 data-i18n="program.sat.day"></h3>
           <span class="dsub" data-i18n="program.sat.sub"></span>
@@ -99,8 +107,18 @@
           </div>
           <div class="tl-item">
             <span class="tl-time" data-i18n="program.sat.laterTime"></span>
-            <div class="tl-title" data-i18n="program.sat.t4"></div>
-            <p class="tl-desc" data-i18n="program.sat.d4"></p>
+            <div class="tl-title" data-i18n="program.sat.d4"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-block reveal">
+        <div class="daytitle">
+          <h3 data-i18n="program.sun.day"></h3>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <p class="tl-desc" data-i18n="program.sun.desc"></p>
           </div>
         </div>
       </div>
@@ -109,6 +127,9 @@
 
   <section id="info" class="page">
     <div class="container">
+      <figure class="info-banner reveal">
+        <img src="photos/Real%20Practical%20Information.png" alt="Stilla">
+      </figure>
       <div class="pagehead">
         <div class="label kicker" data-i18n="info.kicker"></div>
         <h2 data-i18n="info.title"></h2>
@@ -116,26 +137,26 @@
       </div>
 
       <div class="info-grid">
-        <div class="info-card">
+        <div class="info-card reveal">
           <h3 data-i18n="info.loc.h"></h3>
-          <p data-i18n="info.loc.p1"></p>
+          <p data-i18n="info.loc.p1" data-i18n-html></p>
           <p data-i18n="info.loc.p2"></p>
         </div>
-        <div class="info-card">
+        <div class="info-card reveal">
           <h3 data-i18n="info.dress.h"></h3>
           <p data-i18n="info.dress.p1"></p>
           <p data-i18n="info.dress.p2"></p>
         </div>
-        <div class="info-card">
+        <div class="info-card reveal">
           <h3 data-i18n="info.transport.h"></h3>
-          <p data-i18n="info.transport.p1"></p>
+          <p data-i18n="info.transport.p1" data-i18n-html></p>
         </div>
-        <div class="info-card">
+        <div class="info-card reveal">
           <h3 data-i18n="info.gifts.h"></h3>
           <p data-i18n="info.gifts.p1"></p>
           <span class="placeholder" data-i18n="info.gifts.ph"></span>
         </div>
-        <div class="info-card">
+        <div class="info-card reveal">
           <h3 data-i18n="info.food.h"></h3>
           <p data-i18n="info.food.p1"></p>
         </div>
@@ -145,14 +166,17 @@
 
   <section id="overnatting" class="page">
     <div class="container">
+      <figure class="info-banner reveal">
+        <img src="photos/Stilla-Beach.jpg" alt="Stranden ved Stilla" style="object-position:center 75%;">
+      </figure>
       <div class="pagehead">
         <div class="label kicker" data-i18n="stay.kicker"></div>
         <h2 data-i18n="stay.title"></h2>
         <p class="sub" data-i18n="stay.sub"></p>
       </div>
 
-      <div class="stay-block">
-        <h3>Thon Hotel Parken, Kristiansand</h3>
+      <div class="stay-block reveal">
+        <h3><a href="https://www.thonhotels.no/hoteller/norge/kristiansand/thon-hotel-parken/" target="_blank" rel="noopener">Thon Hotel Parken, Kristiansand</a></h3>
         <p class="intro" data-i18n="stay.thon.intro"></p>
 
         <div class="stay-meta">
@@ -180,8 +204,8 @@
         <p class="stay-note" data-i18n="stay.thon.note"></p>
       </div>
 
-      <div class="stay-block">
-        <h3>Skottevik Feriesenter</h3>
+      <div class="stay-block reveal">
+        <h3><a href="https://skottevik.no/" target="_blank" rel="noopener">Skottevik Feriesenter</a></h3>
         <p class="intro" data-i18n="stay.skottevik.intro"></p>
 
         <div class="label price-label" data-i18n="stay.skottevik.priceLabel"></div>
