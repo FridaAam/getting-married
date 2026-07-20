@@ -211,18 +211,6 @@
     border:1px dashed var(--gold); padding:4px 10px; border-radius:2px;
   }
 
-  /* ---- Opplevelser (activities) ---- */
-  .activity-list{display:flex; flex-direction:column;}
-  .activity{
-    display:grid; grid-template-columns:120px 1fr; gap:28px;
-    padding:30px 0; border-bottom:1px solid var(--line);
-  }
-  .activity:first-child{padding-top:0;}
-  @media (max-width:640px){.activity{grid-template-columns:1fr; gap:6px;}}
-  .activity .tag{font-family:'Inter',sans-serif; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--sea); padding-top:4px;}
-  .activity h3{font-size:23px; margin-bottom:8px; font-weight:500;}
-  .activity p{margin:0; opacity:0.85;}
-
   /* ---- Overnatting / Accommodation ---- */
   .stay-block{margin-bottom:80px;}
   .stay-block:last-child{margin-bottom:0;}
@@ -321,8 +309,6 @@
     <li><a data-page="program" data-i18n="nav.program" onclick="goTo('program')"></a></li>
     <li><a data-page="info" data-i18n="nav.info" onclick="goTo('info')"></a></li>
     <li><a data-page="overnatting" data-i18n="nav.stay" onclick="goTo('overnatting')"></a></li>
-    <li><a data-page="opplevelser" data-i18n="nav.activities" onclick="goTo('opplevelser')"></a></li>
-    <li><a data-page="cast" data-i18n="nav.cast" onclick="goTo('cast')"></a></li>
     <li><a data-page="rsvp" data-i18n="nav.rsvp" onclick="goTo('rsvp')"></a></li>
   </ul>
   <div class="langswitch">
@@ -537,61 +523,6 @@
         </div>
         <p class="stay-note" data-i18n="stay.skottevik.bookingNote"></p>
         <p class="stay-note" data-i18n="stay.skottevik.deadline"></p>
-      </div>
-    </div>
-  </section>
-
-  <section id="opplevelser" class="page">
-    <div class="container">
-      <div class="pagehead">
-        <div class="label kicker" data-i18n="act.kicker"></div>
-        <h2 data-i18n="act.title"></h2>
-        <p class="sub" data-i18n="act.sub"></p>
-      </div>
-
-      <div class="activity-list">
-        <div class="activity">
-          <span class="tag" data-i18n="act.a1.tag"></span>
-          <div>
-            <h3 data-i18n="act.a1.h"></h3>
-            <p data-i18n="act.a1.p"></p>
-          </div>
-        </div>
-        <div class="activity">
-          <span class="tag" data-i18n="act.a2.tag"></span>
-          <div>
-            <h3 data-i18n="act.a2.h"></h3>
-            <p data-i18n="act.a2.p"></p>
-          </div>
-        </div>
-        <div class="activity">
-          <span class="tag" data-i18n="act.a3.tag"></span>
-          <div>
-            <h3 data-i18n="act.a3.h"></h3>
-            <p data-i18n="act.a3.p"></p>
-          </div>
-        </div>
-        <div class="activity">
-          <span class="tag" data-i18n="act.a4.tag"></span>
-          <div>
-            <h3 data-i18n="act.a4.h"></h3>
-            <p data-i18n="act.a4.p"></p>
-          </div>
-        </div>
-        <div class="activity">
-          <span class="tag" data-i18n="act.a5.tag"></span>
-          <div>
-            <h3 data-i18n="act.a5.h"></h3>
-            <p data-i18n="act.a5.p"></p>
-          </div>
-        </div>
-        <div class="activity">
-          <span class="tag" data-i18n="act.a6.tag"></span>
-          <div>
-            <h3 data-i18n="act.a6.h"></h3>
-            <p data-i18n="act.a6.p"></p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
