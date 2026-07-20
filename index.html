@@ -223,23 +223,6 @@
   .activity h3{font-size:23px; margin-bottom:8px; font-weight:500;}
   .activity p{margin:0; opacity:0.85;}
 
-  /* ---- Cast & Characters ---- */
-  .cast-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:36px 44px;}
-  @media (max-width:700px){.cast-grid{grid-template-columns:1fr;}}
-  .cast-card{display:flex; gap:18px; align-items:flex-start;}
-  .cast-mark{
-    width:46px; height:46px; border-radius:50%; border:1px solid var(--gold);
-    display:flex; align-items:center; justify-content:center; flex-shrink:0;
-    font-family:'Fraunces',serif; font-style:italic; color:var(--gold); font-size:18px;
-  }
-  .cast-card h3{font-size:19px; margin-bottom:3px;}
-  .cast-card .role{font-family:'Inter',sans-serif; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--sea); margin-bottom:6px; display:block;}
-  .cast-card p{margin:0; font-size:16px; opacity:0.85;}
-  .cast-note{
-    margin-top:50px; padding:22px 26px; background:var(--sand); border-left:2px solid var(--gold);
-    font-family:'Inter',sans-serif; font-size:13px; color:var(--sea); line-height:1.6;
-  }
-
   /* ---- Overnatting / Accommodation ---- */
   .stay-block{margin-bottom:80px;}
   .stay-block:last-child{margin-bottom:0;}
@@ -610,69 +593,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="cast" class="page">
-    <div class="container">
-      <div class="pagehead">
-        <div class="label kicker" data-i18n="cast.kicker"></div>
-        <h2>Cast &amp; Characters</h2>
-        <p class="sub" data-i18n="cast.sub"></p>
-      </div>
-
-      <div class="cast-grid">
-        <div class="cast-card">
-          <div class="cast-mark">F</div>
-          <div>
-            <h3>Frida</h3>
-            <span class="role" data-i18n="cast.frida.role"></span>
-            <p data-i18n="cast.frida.p"></p>
-          </div>
-        </div>
-        <div class="cast-card">
-          <div class="cast-mark">K</div>
-          <div>
-            <h3>Kristoffer</h3>
-            <span class="role" data-i18n="cast.kristoffer.role"></span>
-            <p data-i18n="cast.kristoffer.p"></p>
-          </div>
-        </div>
-        <div class="cast-card">
-          <div class="cast-mark">?</div>
-          <div>
-            <h3 data-i18n="cast.witness1.h"></h3>
-            <span class="role" data-i18n="cast.witness1.role"></span>
-            <p data-i18n="cast.placeholderText"></p>
-          </div>
-        </div>
-        <div class="cast-card">
-          <div class="cast-mark">?</div>
-          <div>
-            <h3 data-i18n="cast.witness2.h"></h3>
-            <span class="role" data-i18n="cast.witness1.role"></span>
-            <p data-i18n="cast.placeholderText"></p>
-          </div>
-        </div>
-        <div class="cast-card">
-          <div class="cast-mark">F</div>
-          <div>
-            <h3>Fredrik &amp; Hayley</h3>
-            <span class="role" data-i18n="cast.hosts.role"></span>
-            <p data-i18n="cast.hosts.p"></p>
-          </div>
-        </div>
-        <div class="cast-card">
-          <div class="cast-mark">?</div>
-          <div>
-            <h3>Toastmaster</h3>
-            <span class="role" data-i18n="cast.witness1.role"></span>
-            <p data-i18n="cast.placeholderText"></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="cast-note" data-i18n="cast.note"></div>
     </div>
   </section>
 
