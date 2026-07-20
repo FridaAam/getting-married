@@ -1,25 +1,26 @@
 const translations = {
   no: {
     nav:{program:"Program", info:"Praktisk info", stay:"Overnatting", rsvp:"RSVP"},
-    hero:{eyebrow:"Vi skal gifte oss", date:"29. august · Stilla, Indre Kviviga", place:"Stilla, Høvåg - Sørlandet", scroll:"Stilla venter"},
+    hero:{eyebrow:"Vi gifter oss", date:"Lørdag 29. august", place:"Stilla, Høvåg - Sørlandet", scroll:"Stilla venter", rsvpCta:"Til RSVP →"},
     program:{
       kicker:"Helgens gang", title:"Program",
-      sub:"To dager ved sjøen — én rolig kveld for å bli kjent, én dag for å feire.",
-      fri:{day:"Fredag", desc:"Vi tenner grillen, og bruker kvelden på å bli bedre kjent før den store dagen. Uformelt og avslappet."},
+      sub:"En helg på Sørlandet — én rolig kveld for å bli kjent, én dag for å feire.",
+      fri:{day:"Fredag", desc:"Vi tenner grillen, og bruker kvelden på å bli bedre kjent før den store dagen. Uformelt og avslappet. Det er også mulighet for eventyrlystne å bade."},
       sat:{
         day:"Lørdag", sub:"Bryllupsdagen",
-        t1:"Vielse", d1:"Selve seremonien — vi sier ja.",
-        t2:"Mottakelse", d2:"Mottakelse med lett mat og drikke på plenen",
-        t3:"Middag", d3:"Middag i teltet",
-        laterTime:"Utover kvelden", d4:"Kake, dans og fest",
-      }
+        t1:"Vielse på stranda", d1:"Selve seremonien — vi sier ja.",
+        t2:"Mottakelse på plenen med lett mat og drikke", d2:"Mottakelse med lett mat og drikke på plenen",
+        t3:"Middag i teltet", d3:"Middag i teltet",
+        laterTime:"Utover kvelden", d4:"Kake, dans, fest, og nattmat",
+      },
+      sun:{day:"Søndag", desc:"Mulighet å komme innom Stilla for å ta farvel, ta seg en dukkert, og slikke sine sår."}
     },
     info:{
       kicker:"Godt å vite", title:"Praktisk informasjon", sub:"Alt du trenger å vite før du kommer til Stilla.",
-      loc:{h:"Sted", p1:"Stilla, Kvivigveien 40, 4770 Høvåg."},
+      loc:{h:"Sted", p1:'Stilla, <a href="https://www.google.com/maps/place/Kvivigveien+40,+4770+H%C3%B8v%C3%A5g/@58.1281422,8.2166068,200m/data=!3m1!1e3!4m6!3m5!1s0x4647ffeae1062d45:0x778d7492a5174bc4!8m2!3d58.1283487!4d8.2171679!16s%2Fg%2F11yflns9f8" target="_blank" rel="noopener">Kvivigveien 40, 4770 Høvåg</a>.'},
       dress:{h:"Antrekk", p1:"Smoking/dress; lang (uhvit) kjole.", p2:"Vi anbefaler plen-vennlige sko, da vielsen og minglingen foregår på gress."},
       stay:{h:"Overnatting", p1:"Forslag til overnatting i nærheten kommer her — både hoteller i Lillesand og muligheter for hytte/rom i området.", ph:"Forslag legges til"},
-      transport:{h:"Transport", p1:"For gjester som bor i Kristiansand vil det settes opp buss/taxi fra Thon Hotell Parken i Kristiansand til og fra Stilla. Vi anbefaler gjester som bor på Skottevik Feriesenter om å rusle bort til Stilla. Det tar ca. 15 minutter."},
+      transport:{h:"Transport", p1:'For gjester som bor i Kristiansand vil det settes opp buss/taxi fra <a href="https://www.thonhotels.no/hoteller/norge/kristiansand/thon-hotel-parken/" target="_blank" rel="noopener">Thon Hotell Parken</a> i Kristiansand til og fra Stilla. Vi anbefaler gjester som bor på <a href="https://skottevik.no/" target="_blank" rel="noopener">Skottevik Feriesenter</a> om å rusle bort til Stilla. Det tar ca. 15 minutter.'},
       gifts:{h:"Gaver", p1:"Det viktigste er at dere kommer.", ph:"Info legges til"},
       food:{h:"Mat & allergier", p1:"Har du allergier eller matpreferanser? Legg det inn under RSVP, så tar vi hånd om det."}
     },
@@ -65,25 +66,26 @@ const translations = {
   },
   en: {
     nav:{program:"Schedule", info:"Good to Know", stay:"Accommodation", rsvp:"RSVP"},
-    hero:{eyebrow:"We're getting married", date:"August 29 · Stilla, Indre Kviviga", place:"Stilla, Høvåg – Sørlandet, Norway", scroll:"Stilla awaits"},
+    hero:{eyebrow:"We're getting married", date:"Saturday, August 29", place:"Stilla, Høvåg – Sørlandet, Norway", scroll:"Stilla awaits", rsvpCta:"RSVP →"},
     program:{
       kicker:"The weekend", title:"Schedule",
-      sub:"Two days by the sea — one relaxed evening to get to know each other, one day to celebrate.",
-      fri:{day:"Friday", desc:"We'll light the grill, and spend the evening getting to know each other before the big day. Relaxed and informal."},
+      sub:"A weekend on the Sørlandet coast — one relaxed evening to get to know each other, one day to celebrate.",
+      fri:{day:"Friday", desc:"We'll light the grill, and spend the evening getting to know each other before the big day. Relaxed and informal. There's also a chance for the more adventurous to go for a swim."},
       sat:{
         day:"Saturday", sub:"Wedding Day",
-        t1:"Ceremony", d1:"The ceremony itself — we say yes.",
-        t2:"Drinks", d2:"A glass in hand and time to congratulate, breathe, and enjoy the view.",
-        t3:"Dinner", d3:"We'll sit down to dinner together.",
-        laterTime:"Later that evening", t4:"Dancing", d4:"We'll hit the dance floor, and the night is ours."
-      }
+        t1:"Ceremony on the beach", d1:"The ceremony itself — we say yes.",
+        t2:"Drinks on the lawn, with light bites", d2:"A glass in hand and time to congratulate, breathe, and enjoy the view.",
+        t3:"Dinner in the marquee", d3:"We'll sit down to dinner together.",
+        laterTime:"Later that evening", d4:"Cake, dancing, a party, and midnight snacks."
+      },
+      sun:{day:"Sunday", desc:"Feel free to stop by Stilla to say goodbye, take a dip, and lick your wounds."}
     },
     info:{
       kicker:"Good to know", title:"Practical Information", sub:"Everything you need to know before you arrive at Stilla.",
-      loc:{h:"Location", p1:"Stilla, Kvivigveien 40, 4770 Høvåg"},
+      loc:{h:"Location", p1:'Stilla, <a href="https://www.google.com/maps/place/Kvivigveien+40,+4770+H%C3%B8v%C3%A5g/@58.1281422,8.2166068,200m/data=!3m1!1e3!4m6!3m5!1s0x4647ffeae1062d45:0x778d7492a5174bc4!8m2!3d58.1283487!4d8.2171679!16s%2Fg%2F11yflns9f8" target="_blank" rel="noopener">Kvivigveien 40, 4770 Høvåg</a>'},
       dress:{h:"Dress Code", p1:"Tuxedo/suit; long (non-white) dress.", p2:"We recommend lawn-friendly shoes, since the ceremony and mingling take place on the lawn."},
       stay:{h:"Accommodation", p1:"Suggestions for nearby accommodation will go here — hotels in Lillesand as well as cabins and rooms in the area.", ph:"Suggestions coming soon"},
-      transport:{h:"Transport", p1:"For guests staying at Thon Hotel Parken in Kristiansand we will arrange taxi/bus to and from Stilla. For guests staying at Skottevik Feriesenter, we recommend walking over to Stilla. It takes about 15 minutes."},
+      transport:{h:"Transport", p1:'For guests staying at <a href="https://www.thonhotels.no/hoteller/norge/kristiansand/thon-hotel-parken/" target="_blank" rel="noopener">Thon Hotel Parken</a> in Kristiansand we will arrange taxi/bus to and from Stilla. For guests staying at <a href="https://skottevik.no/" target="_blank" rel="noopener">Skottevik Feriesenter</a>, we recommend walking over to Stilla. It takes about 15 minutes.'},
       gifts:{h:"Gifts", p1:"The most important thing is that you're there.", ph:"Info coming soon"},
       food:{h:"Food & Allergies", p1:"Have any allergies or dietary preferences? Let us know under RSVP and we'll take care of it."}
     },

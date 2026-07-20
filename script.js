@@ -22,7 +22,9 @@ function setLang(lang){
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const val = getPath(translations[lang], el.dataset.i18n);
-    if(val !== null) el.textContent = val;
+    if(val === null) return;
+    if('i18nHtml' in el.dataset) el.innerHTML = val;
+    else el.textContent = val;
   });
   document.querySelectorAll('[data-i18n-ph]').forEach(el => {
     const val = getPath(translations[lang], el.dataset.i18nPh);
@@ -172,3 +174,18 @@ function escapeHtml(str){
 
 setLang('no');
 goTo('hero');
+
+const revealEls = document.querySelectorAll('.reveal, .frame-reveal');
+if('IntersectionObserver' in window){
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+  revealEls.forEach(el => revealObserver.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('in-view'));
+}
