@@ -55,6 +55,20 @@ const translations = {
       friday:{label:"Fredag — Grilling (18:00–22:00)"},
       saturday:{label:"Lørdag — Bryllupet", sub:"Vielse & fest"},
       attending:"Kommer", cant:"Kan ikke",
+      extraGuest:{
+        label:"Tar du med ekstra gjest?",
+        yes:"Ja, jeg tar med en gjest",
+        no:"Nei, bare meg",
+        nameLbl:"Navn på gjesten",
+        namePh:"Fornavn Etternavn"
+      },
+      staying:{
+        label:"Hvor overnatter du?",
+        thon:"Thon Hotell Parken",
+        skottevik:"Skottevig Feriesenter",
+        other:"Annet"
+      },
+      song:{label:"Hvilken sang får deg ut på dansegulvet?", ph:"Artist – Sangtittel"},
       notes:{label:"Allergier, matpreferanser eller annet vi bør vite", ph:"F.eks. glutenfri, vegetar, annet..."},
       error:"Vennligst fyll ut navn og svar for begge dager.",
       submit:"Send svar", thanks:"Takk,", doneMsg:"Svaret ditt er notert. Vi gleder oss til å feire med deg.",
@@ -120,6 +134,20 @@ const translations = {
       friday:{label:"Friday — Casual barbeque (18:00–22:00)"},
       saturday:{label:"Saturday — The Wedding", sub:"Ceremony & Party"},
       attending:"Attending", cant:"Can't make it",
+      extraGuest:{
+        label:"Are you bringing an extra guest?",
+        yes:"Yes, I'm bringing a guest",
+        no:"No, just me",
+        nameLbl:"Guest's name",
+        namePh:"First Last"
+      },
+      staying:{
+        label:"Where are you staying?",
+        thon:"Thon Hotell Parken",
+        skottevik:"Skottevig Feriesenter",
+        other:"Other"
+      },
+      song:{label:"What song gets you on the dance floor?", ph:"Artist – Song title"},
       notes:{label:"Allergies, dietary preferences, or anything else we should know", ph:"E.g. gluten-free, vegetarian, other..."},
       error:"Please fill in your name and answer for both days.",
       submit:"Submit RSVP", thanks:"Thank you,", doneMsg:"Your response has been noted. We can't wait to celebrate with you.",
