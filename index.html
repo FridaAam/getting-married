@@ -15,7 +15,7 @@
 
 <nav>
   <span class="brandmark">F &amp; K</span>
-  <button class="navtoggle" onclick="toggleNav()"><span></span></button>
+  <button class="navtoggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
   <ul class="navlinks">
     <li><a data-page="hero" onclick="goTo('hero')">F&amp;K</a></li>
     <li><a data-page="program" data-i18n="nav.program" onclick="goTo('program')"></a></li>
@@ -159,6 +159,10 @@
         <div class="info-card reveal">
           <h3 data-i18n="info.food.h"></h3>
           <p data-i18n="info.food.p1"></p>
+        </div>
+        <div class="info-card reveal">
+          <h3 data-i18n="info.speech.h"></h3>
+          <p data-i18n="info.speech.p1" data-i18n-html></p>
         </div>
       </div>
     </div>
@@ -343,13 +347,13 @@
         </div>
 
         <div class="field">
-          <label data-i18n="rsvp.song.label"></label>
-          <input type="text" id="rsong" data-i18n-ph="rsvp.song.ph">
+          <label data-i18n="rsvp.notes.label"></label>
+          <textarea id="rnotes" data-i18n-ph="rsvp.notes.ph"></textarea>
         </div>
 
         <div class="field">
-          <label data-i18n="rsvp.notes.label"></label>
-          <textarea id="rnotes" data-i18n-ph="rsvp.notes.ph"></textarea>
+          <label data-i18n="rsvp.song.label"></label>
+          <input type="text" id="rsong" data-i18n-ph="rsvp.song.ph">
         </div>
 
         <p class="rsvp-error" id="rsvpError" data-i18n="rsvp.error"></p>
