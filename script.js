@@ -53,6 +53,11 @@ document.querySelectorAll('.choice').forEach(choice => {
     group.querySelectorAll('.choice').forEach(c => c.classList.remove('selected'));
     choice.classList.add('selected');
     choice.querySelector('input').checked = true;
+
+    if(group.dataset.group === 'extraGuest'){
+      const bringing = choice.dataset.value === 'yes';
+      document.getElementById('extraGuestNameField').style.display = bringing ? '' : 'none';
+    }
   });
 });
 
@@ -61,7 +66,11 @@ const GFORM_ENTRIES = {
   name: 'entry.599596592',
   friday: 'entry.2014790516',
   saturday: 'entry.1406104630',
-  notes: 'entry.2014298393'
+  extraGuest: 'entry.1741505114',
+  extraGuestName: 'entry.872767972',
+  staying: 'entry.1936161963',
+  notes: 'entry.2014298393',
+  song: 'entry.450540508'
 };
 
 function submitToGoogleForm(entry){
@@ -71,11 +80,21 @@ function submitToGoogleForm(entry){
   form.target = 'hidden_iframe';
   form.style.display = 'none';
 
+  const stayingLabels = {
+    thon: 'Thon Hotell Parken',
+    skottevik: 'Skottevig Feriesenter',
+    other: 'Annet'
+  };
   const fields = {
+    pageHistory: '0,1,2',
     [GFORM_ENTRIES.name]: entry.name,
     [GFORM_ENTRIES.friday]: entry.friday === 'yes' ? 'Kommer' : 'Kan ikke',
     [GFORM_ENTRIES.saturday]: entry.saturday === 'yes' ? 'Kommer' : 'Kan ikke',
-    [GFORM_ENTRIES.notes]: entry.notes
+    [GFORM_ENTRIES.extraGuest]: entry.extraGuest === 'yes' ? 'Ja' : 'Nei',
+    [GFORM_ENTRIES.extraGuestName]: entry.extraGuestName || '',
+    [GFORM_ENTRIES.staying]: stayingLabels[entry.staying] || '',
+    [GFORM_ENTRIES.notes]: entry.notes || '',
+    [GFORM_ENTRIES.song]: entry.song || ''
   };
 
   Object.entries(fields).forEach(([key, value]) => {
@@ -104,10 +123,16 @@ document.getElementById('rsvpForm').addEventListener('submit', async (e) => {
   }
   errorEl.style.display = 'none';
 
+  const extraGuest = document.querySelector('input[name=extraGuest]:checked');
+  const staying = document.querySelector('input[name=staying]:checked');
   const entry = {
     name,
     friday: friday.value,
     saturday: saturday.value,
+    extraGuest: extraGuest ? extraGuest.value : 'no',
+    extraGuestName: document.getElementById('rextraname').value.trim(),
+    staying: staying ? staying.value : '',
+    song: document.getElementById('rsong').value.trim(),
     notes: document.getElementById('rnotes').value.trim(),
     submittedAt: new Date().toISOString()
   };

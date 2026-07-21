@@ -274,6 +274,43 @@
         </div>
 
         <div class="field">
+          <label data-i18n="rsvp.extraGuest.label"></label>
+          <div class="choice-row" data-group="extraGuest">
+            <label class="choice" data-value="yes">
+              <input type="radio" name="extraGuest" value="yes">
+              <span class="ctitle" data-i18n="rsvp.extraGuest.yes"></span>
+            </label>
+            <label class="choice" data-value="no">
+              <input type="radio" name="extraGuest" value="no">
+              <span class="ctitle" data-i18n="rsvp.extraGuest.no"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="field" id="extraGuestNameField" style="display:none;">
+          <label data-i18n="rsvp.extraGuest.nameLbl"></label>
+          <input type="text" id="rextraname" data-i18n-ph="rsvp.extraGuest.namePh">
+        </div>
+
+        <div class="field">
+          <label data-i18n="rsvp.staying.label"></label>
+          <div class="choice-row choice-row--wrap" data-group="staying">
+            <label class="choice" data-value="thon">
+              <input type="radio" name="staying" value="thon">
+              <span class="ctitle" data-i18n="rsvp.staying.thon"></span>
+            </label>
+            <label class="choice" data-value="skottevik">
+              <input type="radio" name="staying" value="skottevik">
+              <span class="ctitle" data-i18n="rsvp.staying.skottevik"></span>
+            </label>
+            <label class="choice" data-value="other">
+              <input type="radio" name="staying" value="other">
+              <span class="ctitle" data-i18n="rsvp.staying.other"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="field">
           <label data-i18n="rsvp.friday.label"></label>
           <div class="choice-row" data-group="friday">
             <label class="choice" data-value="yes">
@@ -303,6 +340,11 @@
               <span class="csub" data-i18n="program.sat.day"></span>
             </label>
           </div>
+        </div>
+
+        <div class="field">
+          <label data-i18n="rsvp.song.label"></label>
+          <input type="text" id="rsong" data-i18n-ph="rsvp.song.ph">
         </div>
 
         <div class="field">
