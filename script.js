@@ -1,3 +1,9 @@
+function updateNavScroll(){
+  document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 24);
+}
+window.addEventListener('scroll', updateNavScroll, {passive:true});
+updateNavScroll();
+
 function toggleNav(){
   const open = document.querySelector('.navlinks').classList.toggle('open');
   document.querySelector('.nav-backdrop').classList.toggle('open', open);

@@ -22,7 +22,8 @@ const translations = {
       stay:{h:"Overnatting", p1:"Forslag til overnatting i nærheten kommer her — både hoteller i Lillesand og muligheter for hytte/rom i området.", ph:"Forslag legges til"},
       transport:{h:"Transport", p1:'For gjester som bor i Kristiansand vil det settes opp buss/taxi fra <a href="https://www.thonhotels.no/hoteller/norge/kristiansand/thon-hotel-parken/" target="_blank" rel="noopener">Thon Hotell Parken</a> i Kristiansand til og fra Stilla. Vi anbefaler gjester som bor på <a href="https://skottevik.no/" target="_blank" rel="noopener">Skottevik Feriesenter</a> om å rusle bort til Stilla. Det tar ca. 15 minutter.'},
       gifts:{h:"Gaver", p1:"Det viktigste er at dere kommer.", ph:"Info legges til"},
-      food:{h:"Mat & allergier", p1:"Har du allergier eller matpreferanser? Legg det inn under RSVP, så tar vi hånd om det."}
+      food:{h:"Mat & allergier", p1:"Har du allergier eller matpreferanser? Legg det inn under RSVP, så tar vi hånd om det."},
+      speech:{h:"Tale eller innslag?", p1:'Ønsker du å holde en tale eller bidra med et innslag? Ta kontakt med toastmasterne Peder Engesæth (<a href="mailto:peder.engesaeth@gmail.com">peder.engesaeth@gmail.com</a>) og Ida Myran.'}
     },
     stay:{
       kicker:"Rom & losji", title:"Overnatting",
@@ -56,16 +57,16 @@ const translations = {
       saturday:{label:"Lørdag — Bryllupet", sub:"Vielse & fest"},
       attending:"Kommer", cant:"Kan ikke",
       extraGuest:{
-        label:"Tar du med ekstra gjest?",
-        yes:"Ja, jeg tar med en gjest",
-        no:"Nei, bare meg",
-        nameLbl:"Navn på gjesten",
+        label:"Kommer du med følge?",
+        yes:"Ja, jeg kommer med følge",
+        no:"Nei, jeg kjører solo",
+        nameLbl:"Navn på følge",
         namePh:"Fornavn Etternavn"
       },
       staying:{
         label:"Hvor overnatter du?",
         thon:"Thon Hotell Parken",
-        skottevik:"Skottevig Feriesenter",
+        skottevik:"Skottevik Feriesenter",
         other:"Annet"
       },
       song:{label:"Hvilken sang får deg ut på dansegulvet?", ph:"Artist – Sangtittel"},
@@ -101,7 +102,8 @@ const translations = {
       stay:{h:"Accommodation", p1:"Suggestions for nearby accommodation will go here — hotels in Lillesand as well as cabins and rooms in the area.", ph:"Suggestions coming soon"},
       transport:{h:"Transport", p1:'For guests staying at <a href="https://www.thonhotels.no/hoteller/norge/kristiansand/thon-hotel-parken/" target="_blank" rel="noopener">Thon Hotel Parken</a> in Kristiansand we will arrange taxi/bus to and from Stilla. For guests staying at <a href="https://skottevik.no/" target="_blank" rel="noopener">Skottevik Feriesenter</a>, we recommend walking over to Stilla. It takes about 15 minutes.'},
       gifts:{h:"Gifts", p1:"The most important thing is that you're there.", ph:"Info coming soon"},
-      food:{h:"Food & Allergies", p1:"Have any allergies or dietary preferences? Let us know under RSVP and we'll take care of it."}
+      food:{h:"Food & Allergies", p1:"Have any allergies or dietary preferences? Let us know under RSVP and we'll take care of it."},
+      speech:{h:"Speeches & Performances", p1:'Want to give a speech a song, poem, or sketch? Get in touch with our toastmasters Peder Engesæth (<a href="mailto:peder.engesaeth@gmail.com">peder.engesaeth@gmail.com</a>) and Ida Myran.'}
     },
     stay:{
       kicker:"Rooms & Stay", title:"Accommodation",
@@ -144,7 +146,7 @@ const translations = {
       staying:{
         label:"Where are you staying?",
         thon:"Thon Hotell Parken",
-        skottevik:"Skottevig Feriesenter",
+        skottevik:"Skottevik Feriesenter",
         other:"Other"
       },
       song:{label:"What song gets you on the dance floor?", ph:"Artist – Song title"},
