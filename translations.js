@@ -39,14 +39,14 @@ const translations = {
         note:"Oppgi rabattkoden ved bestilling for å få 25 % rabatt. Book én natt (lørdag) eller to (fredag & lørdag), etter eget ønske."
       },
       skottevik:{
-        intro:"For en litt enklere og mer naturnær opplevelse, og gangavstand til selve bryllupet, har vi forhåndsreservert et antall leiligheter på Skottevik for perioden 28.–30. august 2026.",
+        intro:"For en litt enklere og mer naturnær opplevelse, og gangavstand til selve bryllupet, anbefaler vi å booke overnatting på Skottevik Feriesenter.",
         priceLabel:"Priser for hele oppholdet, 2 netter (28.–30.8.26), inkl. obligatorisk utvask",
         l4cap:"4 personer · 35 m²", l4desc:"To dobbeltrom med rammemadrasser. Stue med åpent kjøkken, komfyr, kjøleskap og oppvaskmaskin. Bad med dusj og toalett. Felles uteplass og vik med sandstrand utenfor leilighetsbygget.",
         l5cap:"5 personer · 50 m²", l5desc:"Leilighet i sørlandsstil med to dobbeltrom og ett enkeltrom. Bad med dusj og toalett. Stue med åpent kjøkken, komfyr og kjøleskap. Ca. 20 meter fra sjøen, med tilgang til felles uteplass.",
         l6acap:"6 personer · ca. 56 m²", l6adesc:"Leilighet over restauranten med to soverom og hems. To enheter ligger mot tunet uten balkong, to har liten balkong mot sjøen. Stue med åpent kjøkken, komfyr, kjøleskap og oppvaskmaskin. Bad med dusj og toalett. Trapp opp til enheten.",
         l6ccap:"6 personer · ca. 56 m²", l6cdesc:"Leilighet over to plan helt ned ved sjøkanten, med to soverom og hems. Møblert terrasse mot sjøen. Kombinert stue og kjøkken med spiseplass, komfyr, kjøleskap og oppvaskmaskin. Bad har dusj og toalett.",
         refLabel:"Referanse", bookingLabel:"Bestilling",
-        bookingNote:"booking@skottevik.no — oppgi referanse, type enhet, e-postadresse og telefonnummer. Du får deretter bekreftelse og betalingslenke.",
+        bookingNote:'Send mail til <a href="mailto:booking@skottevik.no">booking@skottevik.no</a> for å bestille.',
         deadline:"Frist: Reservasjonene holdes til 30. juni 2026."
       }
     },
@@ -119,14 +119,14 @@ const translations = {
         note:"Quote the discount code when booking to get 25% off. Book one night (Saturday) or two (Friday & Saturday), whichever suits you."
       },
       skottevik:{
-        intro:"For a slightly simpler, more nature-close stay within walking distance of the wedding itself, we've pre-booked a number of apartments at Skottevik for 28–30 August 2026.",
+        intro:"For a slightly simpler, more nature-close stay within walking distance of the wedding itself, we recommend staying at Skottevik Feriesenter.",
         priceLabel:"Prices for the full stay, 2 nights (28–30.8.26), incl. mandatory final cleaning",
         l4cap:"4 people · 35 m²", l4desc:"Two double rooms with divan beds. Living room with open kitchen, stove, fridge and dishwasher. Bathroom with shower and toilet. Shared outdoor area and a sandy-beach cove outside the building.",
         l5cap:"5 people · 50 m²", l5desc:"Sørlandet-style apartment with two double rooms and one single room. Bathroom with shower and toilet. Living room with open kitchen, stove and fridge. About 20 metres from the sea, with access to a shared outdoor area.",
         l6acap:"6 people · approx. 56 m²", l6adesc:"Apartment above the restaurant with two bedrooms and a loft. Two units face the courtyard with no balcony; two have a small balcony facing the sea. Living room with open kitchen, stove, fridge and dishwasher. Bathroom with shower and toilet. Stairs up to the unit.",
         l6ccap:"6 people · approx. 56 m²", l6cdesc:"Two-storey apartment right by the water's edge, with two bedrooms and a loft. Furnished terrace facing the sea. Combined living room and kitchen with dining area, stove, fridge and dishwasher. Bathroom with shower and toilet.",
         refLabel:"Reference", bookingLabel:"Booking",
-        bookingNote:"booking@skottevik.no — state the reference, unit type, email address and phone number. You'll then receive confirmation and a payment link.",
+        bookingNote:'Send an email to <a href="mailto:booking@skottevik.no">booking@skottevik.no</a> to make a reservation.',
         deadline:"Deadline: Reservations are held until 30 June 2026."
       }
     },
