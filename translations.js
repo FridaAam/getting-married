@@ -51,7 +51,7 @@ const translations = {
       }
     },
     rsvp:{
-      kicker:"Vi håper du kommer", sub:"Gi oss beskjed om du blir med — på grilling på fredag, bryllupet, eller begge deler.",
+      kicker:"Vi håper du kommer", sub:"Gi oss beskjed om du blir med — på grilling på fredag, bryllupet, eller begge deler.", deadline:"Si fra om du kommer innen søndag 9. august.",
       name:{label:"Navn", ph:"Fornavn Etternavn"},
       friday:{label:"Fredag — Grilling (18:00–22:00)"},
       saturday:{label:"Lørdag — Bryllupet", sub:"Vielse & fest"},
@@ -131,7 +131,7 @@ const translations = {
       }
     },
     rsvp:{
-      kicker:"We hope you'll come", sub:"Let us know if you'll join us — for casual barbeque, the wedding, or both.",
+      kicker:"We hope you'll come", sub:"Let us know if you'll join us — for casual barbeque, the wedding, or both.", deadline:"Please RSVP by Sunday 9 August.",
       name:{label:"Name", ph:"First Last"},
       friday:{label:"Friday — Casual barbeque (18:00–22:00)"},
       saturday:{label:"Saturday — The Wedding", sub:"Ceremony & Party"},
