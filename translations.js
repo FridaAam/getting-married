@@ -17,7 +17,7 @@ const translations = {
     },
     info:{
       kicker:"Godt å vite", title:"Praktisk informasjon", sub:"Alt du trenger å vite før du kommer til Stilla.",
-      loc:{h:"Sted", p1:'Stilla, <a href="https://www.google.com/maps/place/Kvivigveien+40,+4770+H%C3%B8v%C3%A5g/@58.1281422,8.2166068,200m/data=!3m1!1e3!4m6!3m5!1s0x4647ffeae1062d45:0x778d7492a5174bc4!8m2!3d58.1283487!4d8.2171679!16s%2Fg%2F11yflns9f8" target="_blank" rel="noopener">Kvivigveien 40, 4770 Høvåg</a>.'},
+      loc:{h:"Sted", p1:'Stilla, <a href="https://www.google.com/maps/search/?api=1&query=Skottevigveien+441%2C+4770+H%C3%B8v%C3%A5g" target="_blank" rel="noopener">Skottevigveien 441, 4770 Høvåg</a>.'},
       dress:{h:"Antrekk", p1:"Smoking/dress; lang (uhvit) kjole.", p2:"Vi anbefaler plen-vennlige sko, da vielsen og minglingen foregår på gress."},
       stay:{h:"Overnatting", p1:"Forslag til overnatting i nærheten kommer her — både hoteller i Lillesand og muligheter for hytte/rom i området.", ph:"Forslag legges til"},
       transport:{h:"Transport", p1:'For gjester som bor i Kristiansand vil det settes opp buss/taxi fra <a href="https://www.thonhotels.no/hoteller/norge/kristiansand/thon-hotel-parken/" target="_blank" rel="noopener">Thon Hotell Parken</a> i Kristiansand til og fra Stilla. Vi anbefaler gjester som bor på <a href="https://skottevik.no/" target="_blank" rel="noopener">Skottevik Feriesenter</a> om å rusle bort til Stilla. Det tar ca. 15 minutter.'},
@@ -97,7 +97,7 @@ const translations = {
     },
     info:{
       kicker:"Good to know", title:"Practical Information", sub:"Everything you need to know before you arrive at Stilla.",
-      loc:{h:"Location", p1:'Stilla, <a href="https://www.google.com/maps/place/Kvivigveien+40,+4770+H%C3%B8v%C3%A5g/@58.1281422,8.2166068,200m/data=!3m1!1e3!4m6!3m5!1s0x4647ffeae1062d45:0x778d7492a5174bc4!8m2!3d58.1283487!4d8.2171679!16s%2Fg%2F11yflns9f8" target="_blank" rel="noopener">Kvivigveien 40, 4770 Høvåg</a>'},
+      loc:{h:"Location", p1:'Stilla, <a href="https://www.google.com/maps/search/?api=1&query=Skottevigveien+441%2C+4770+H%C3%B8v%C3%A5g" target="_blank" rel="noopener">Skottevigveien 441, 4770 Høvåg</a>'},
       dress:{h:"Dress Code", p1:"Tuxedo/suit; long (non-white) dress.", p2:"We recommend lawn-friendly shoes, since the ceremony and mingling take place on the lawn."},
       stay:{h:"Accommodation", p1:"Suggestions for nearby accommodation will go here — hotels in Lillesand as well as cabins and rooms in the area.", ph:"Suggestions coming soon"},
       transport:{h:"Transport", p1:'For guests staying at <a href="https://www.thonhotels.no/hoteller/norge/kristiansand/thon-hotel-parken/" target="_blank" rel="noopener">Thon Hotel Parken</a> in Kristiansand we will arrange taxi/bus to and from Stilla. For guests staying at <a href="https://skottevik.no/" target="_blank" rel="noopener">Skottevik Feriesenter</a>, we recommend walking over to Stilla. It takes about 15 minutes.'},
